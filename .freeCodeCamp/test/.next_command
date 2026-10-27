@@ -1,0 +1,182 @@
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ "${VSCODE_PREVENT_SHELL_HISTORY:-}" = "1" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+[ -z "${VSCODE_PYTHON_AUTOACTIVATE_GUARD:-}" ]
+export VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+[ -n "${VSCODE_PYTHON_BASH_ACTIVATE:-}" ]
+for var in "${!VSCODE_PYTHON_@}"
+case "$var" in
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups|ignorespace).*"
+[[ "${HISTCONTROL:-}" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[ -n "$STARSHIP_SESSION_KEY" ]
+[ -n "$POSH_SESSION_ID" ]
+builtin printf '\e]633;P;HasRichCommandDetection=True\a'
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+psql --username=freecodecamp --dbname=periodic_table
+mkdir periodic_table
+cd periodic_table
+git init -b main
+git init
+git branch
+clear
+git init
+git branch
+git branch main
+git init -b main
+clear
+git checkout -n main
+git checkout -b main
+touch element.sh
+git add .
+git commit -m "inital commit"
+git add .
+git commit -m "query commands"
+git add .
+git commit -m "result if"
+clear
+git add .
+git commit -m "pipe separator"
+git add .
+git commit -m "echo"
+chmod +x element.sh
+clear
+git log
+git checkout --orphan main
+git checkout --orphan master
+git branch
+__vsc_prompt_cmd_original
+git add .
+git commit -m "Initial commit"
+__vsc_prompt_cmd_original
+git add element.sh
+git commit -m "feat: add element lookup script"
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+echo "# Element lookup script" >> README.md
+git add README.md
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+sed -i 's/exit 0/exit/' element.sh
+git add element.sh
+__vsc_prompt_cmd_original
+git add .
+clear
+git branch
+git branch main
+git checkout main
+git branch -d main
+git checkout master
+git branch -d main
+git branch -D main
+clear
+git branch -m main
+git branch
+git log
+pg_dump -cC --inserts -U freecodecamp periodic_table -cC --inserts -U freecodecamp periodic_table > periodic_table.sqlpg_dump > periodic_table.sql
+clear
+pg_dump -cC --inserts -U freecodecamp periodic_table > periodic_table.sql
+clear
+git add periodic_table.sql
+git commit -m "added sql for periodic table"
+git log -oneline
+git log --oneline
+sed -i 's/exit 0/exit/' element.sh
+git add element.sh
+./element.sh
+hello
+clear
+git add .
+./ element.sh
+./element.sh
+./element.sh ca
+clear
+git log --oneline
+git add .
+git commit -m "feat:add element lookup script"
+chmod +r element.sh
+chmod +x element.sh
+git status
+git add .
+git commit -m "fix: make element.sh executable"
+git log --oneline
+git add .
+git commit -m "fix: make element.sh executable"
+git log --oneline
+__vsc_prompt_cmd_original
+git rebase -i 1737a87
+git log --oneline
+git rebase -i 1737a87
+clear
+git log --oneline
+git reset --soft 1737a87
+clear
+git log --oneline
+git add periodic_table.sql
+git commit -m "chore: add periodic table SQL dump"
+git add element.sh
+git commit -m "feat: add element lookup script"
+git reset --soft 1737a87
+clear
+git add element.sh
+git commit -m "feat: add element lookup script"
+git log
+chmod +r element.sh
+chmod +x element.sh
+git add element.sh
+git commit -m "fix: make element.sh executable"
+git status
+chmod +r element.sh
+git status
+clear
+git add element.sh
+git commit -m "fix: make element.sh executable"
+sed -i 's/exit 0/exit/' element.sh
+clear
+git status
+sed -i 's/exit 0/exit/' element.sh
+git add element.sh
+git statu
+git statua
+git status
+git commit -m "refactor: simplify exit calls"
+clear
+git add README.md
+git commit -m "chore: add README documentation"
+git log --oneline
+git push
+git remote add git@github.com:cb-cyprian/rdb-alpha.git
+git remote add https://github.com/cb-cyprian/rdb-alpha.git
+clear
+git remote add main https://github.com/cb-cyprian/rdb-alpha.git
+git push
+git push origin main
+git remote -v
+git push main
+git push --set-upstream main main
+clear
