@@ -1,4 +1,5 @@
 #!/bin/bash
+#added file permision to +x
 
 PSQL="psql --username=freecodecamp --dbname=periodic_table -t --no-align -c"
 
