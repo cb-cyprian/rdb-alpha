@@ -10,7 +10,7 @@ then
 fi
 
 # Build the query depending on whether input is a number or text
-if [[ $1 =~ ^[0-9]+$ ]]
+if [[ $1 =~ ^[1-9]+$ ]]
 then
   RESULT=$($PSQL "SELECT e.atomic_number, e.symbol, e.name, t.type, p.atomic_mass, p.melting_point_celsius, p.boiling_point_celsius
     FROM elements e
